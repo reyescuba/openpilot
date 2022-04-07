@@ -27,6 +27,9 @@ class CarControllerParams:
   ZERO_GAS = 2048 # Coasting
   MAX_BRAKE = 350 # ~ -3.5 m/s^2 with regen
 
+  # ICE/Acadia gas lookups
+  ICE_ZERO_GAS = 1554
+
   # Allow small margin below -3.5 m/s^2 from ISO 15622:2018 since we
   # perform the closed loop control, and might need some
   # to apply some more braking if we're on a downhill slope.

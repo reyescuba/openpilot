@@ -64,7 +64,7 @@ class CarController:
     if (self.frame % 4) == 0:
       if not CC.longActive:
         # Stock ECU sends max regen when not enabled.
-        self.apply_gas = self.params.MAX_ACC_REGEN
+        self.apply_gas = self.params.ICE_ZERO_GAS
         self.apply_brake = 0
       else:
         self.apply_gas = int(round(interp(actuators.accel, self.params.GAS_LOOKUP_BP, self.params.GAS_LOOKUP_V)))
